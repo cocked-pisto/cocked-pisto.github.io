@@ -484,6 +484,149 @@
     }
 
     /* 3-Tier Pricing Section */
+    /* Entry Report Card (Tripwire Offer) */
+    .entry-report-card {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      border-radius: var(--radius-lg);
+      padding: 26px 22px;
+      margin-bottom: 24px;
+      position: relative;
+      box-shadow: 0 12px 32px -8px rgba(56, 189, 248, 0.18);
+    }
+
+    .report-badge-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .report-badge {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #38bdf8;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 9999px;
+    }
+
+    .report-refund-badge {
+      background: rgba(34, 197, 94, 0.15);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      color: #4ade80;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 9999px;
+    }
+
+    .report-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .report-title-area h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .report-title-area p {
+      font-size: 13.5px;
+      color: var(--text-sub);
+      line-height: 1.5;
+    }
+
+    .report-price-tag {
+      text-align: right;
+    }
+
+    .report-price-num {
+      font-size: 30px;
+      font-weight: 800;
+      color: #38bdf8;
+    }
+
+    .report-price-sub {
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+
+    .report-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 16px 0 20px;
+    }
+
+    .report-item {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+    }
+
+    .report-item-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #e2e8f0;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .report-item-desc {
+      font-size: 12px;
+      color: var(--text-sub);
+      line-height: 1.45;
+    }
+
+    .report-cta-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px dashed rgba(56, 189, 248, 0.35);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      flex-wrap: wrap;
+    }
+
+    .report-cta-notice {
+      font-size: 12.5px;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    .report-cta-btn {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 13.5px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.2s;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+    }
+
+    .report-cta-btn:hover {
+      filter: brightness(1.15);
+      transform: translateY(-1px);
+    }
+
     .pricing-grid-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -796,6 +939,11 @@
       .comp-table { font-size: 11.5px; }
       .comp-table th, .comp-table td { padding: 10px 7px; }
       .pricing-grid-3 { grid-template-columns: 1fr; gap: 12px; }
+      .report-grid { grid-template-columns: 1fr; }
+      .report-header { flex-direction: column; align-items: flex-start; }
+      .report-price-tag { text-align: left; }
+      .report-cta-box { flex-direction: column; align-items: stretch; }
+      .report-cta-btn { text-align: center; }
       .steps-grid { grid-template-columns: 1fr; gap: 8px; }
       .contact-wrap { width: 100%; }
       .apply-card { padding: 24px 14px; }
@@ -958,33 +1106,83 @@
   <section class="section">
     <div class="section-header">
       <div class="section-title">투명하고 합리적인 제작 플랜</div>
-      <p class="section-sub">대표님의 촬영 환경과 니즈에 맞춰 최적화된 3단계 가격 정책을 제공합니다.</p>
+      <p class="section-sub">귀사의 채널 성장을 위한 정밀 전략 리포트부터 월 정기 전담 파트너십까지 최적화된 가격 정책을 제공합니다.</p>
+    </div>
+
+    <!-- Entry Tripwire Offer: 20만 원 전략 리포트 -->
+    <div class="entry-report-card">
+      <div class="report-badge-wrap">
+        <span class="report-badge">STEP 01. 첫 진입 추천 상품</span>
+        <span class="report-refund-badge">🎁 월 정기 플랜 계약 시 20만 원 100% 전액 차감 (페이백)</span>
+      </div>
+      <div class="report-header">
+        <div class="report-title-area">
+          <h3>채널 정밀 진단 & 시그니처 전략 리포트</h3>
+          <p>귀사 업종에 최적화된 고관여 타깃 심리 프로파일과 독점 롱폼 아키텍처를 1:1 맞춤 설계해 드립니다.</p>
+        </div>
+        <div class="report-price-tag">
+          <div class="report-price-num">20만 원</div>
+          <div class="report-price-sub">1회 납품 (VAT 별도)</div>
+        </div>
+      </div>
+
+      <div class="report-grid">
+        <div class="report-item">
+          <div class="report-item-title">🎯 타깃 시청자 심리 프로파일링</div>
+          <div class="report-item-desc">고관여 잠재고객의 이탈을 막고 유입을 부르는 5대 핵심 결핍 심리를 정밀 역설계</div>
+        </div>
+        <div class="report-item">
+          <div class="report-item-title">🏛️ 채널 독점 롱폼 아키텍처 2종</div>
+          <div class="report-item-desc">귀사만의 전문성과 권위를 입증하는 시그니처 킬러 포맷 2개 축 표준화</div>
+        </div>
+        <div class="report-item">
+          <div class="report-item-title">⚙️ 18분 완주 유도 인과 전개도</div>
+          <div class="report-item-desc">시청 지속시간을 극대화하는 알고리즘 맞춤형 톱니바퀴 스토리라인 설계</div>
+        </div>
+        <div class="report-item">
+          <div class="report-item-title">📈 탐색 탭 유입 최적화 카피 프레임</div>
+          <div class="report-item-desc">클릭률(CTR)과 본문의 기대를 일치시켜 탐색 알고리즘을 뚫는 제목·썸네일 3대 모델</div>
+        </div>
+      </div>
+
+      <div class="report-cta-box">
+        <div class="report-cta-notice">
+          💡 <strong>전액 차감 혜택</strong>: 본 리포트를 받아보신 후 <strong>‘월 정기 파트너십(월 4편)’</strong>으로 진행하시면, <strong>리포트 비용 20만 원은 첫 달 제작비에서 100% 전액 공제(차감)</strong>해 드립니다. <br>
+          <span style="font-size: 11.5px; color: #94a3b8;">(※ 단독 1편 파일럿 제작(50만 원) 시에는 공제 혜택이 적용되지 않습니다.)</span>
+        </div>
+        <a href="https://open.kakao.com/o/sEX8RWNi" target="_blank" class="report-cta-btn">20만 원 전략 리포트 신청하기 →</a>
+      </div>
     </div>
 
     <div class="pricing-grid-3">
-      <!-- Tier 1: First Experience -->
+      <!-- Tier 1: Single Pilot Shoot -->
       <div class="price-card">
-        <div class="tier-name">첫 편 스타터 체험</div>
-        <div class="tier-price">60만 원 <span>/ 1회</span></div>
-        <div class="tier-desc">부담 없이 퀄리티를 직접 검증해 보실 수 있는 첫 파트너십 한정 특가 플랜입니다.</div>
+        <div class="tier-name">단독 1편 파일럿 제작</div>
+        <div class="tier-price">50만 원 <span>/ 1회</span></div>
+        <div class="tier-desc">단발성 1회 제작으로 실제 영상 퀄리티와 제작 프로세스를 직접 검증하는 파일럿 플랜입니다.</div>
         <ul class="tier-features">
-          <li><strong>첫 촬영 현장 1:1 방문 코칭 포함</strong> (카메라 각도, 조명, 프롬프터 완벽 세팅)</li>
+          <li><strong>첫 촬영 1:1 세팅 코칭</strong> (카메라 각도, 조명, 프롬프터 세팅 가이드)</li>
           <li>타깃 심리 롱폼 대본 1편 작성</li>
-          <li>Remotion 데이터 인포그래픽 모션</li>
+          <li>Remotion 데이터 인포그래픽 모션 & 완편 편집</li>
           <li>탐색 최적화 썸네일 1종 & 제목 카피</li>
           <li>수정 2회 무상 지원</li>
+          <li style="color: #94a3b8; font-size: 11.5px;">※ 전략 리포트 20만 원 차감 혜택 적용 불가 (단건 제작)</li>
         </ul>
-        <a href="https://open.kakao.com/o/sEX8RWNi" target="_blank" class="tier-btn sub">첫 편 60만 원 신청</a>
+        <a href="https://open.kakao.com/o/sEX8RWNi" target="_blank" class="tier-btn sub">단독 1편 50만 원 신청</a>
       </div>
 
       <!-- Tier 2: Self-Shoot Monthly (Popular) -->
       <div class="price-card featured">
-        <div class="featured-badge">가장 인기 있는 플랜</div>
+        <div class="featured-badge">가장 인기 있는 플랜 | 20만 원 전액 차감</div>
         <div class="tier-name">정기 셀프 촬영 플랜</div>
         <div class="tier-price">건당 70만 원 <span>(월 280만 원)</span></div>
+        <div style="font-size: 12px; color: #4ade80; font-weight: 700; margin-top: -2px; margin-bottom: 8px;">
+          🎁 전략 리포트 20만 원 차감 시 ➔ 첫 달 260만 원!
+        </div>
         <div class="tier-desc">1회차에 맞춰진 세팅대로 대표님이 30분 읽고 촬영본만 전달해 주시는 최적의 효율 모델입니다.</div>
         <ul class="tier-features">
           <li><strong>월 4편 정기 발행 (주 1회)</strong></li>
+          <li><strong>[혜택] 전략 리포트 20만 원 100% 전액 차감</strong></li>
           <li>전편 장문 심리 대본 완벽 납품</li>
           <li>대표님 투입 시간: 매주 딱 30분</li>
           <li>신뢰도 극대화 차트·데이터 모션 전편 포함</li>
@@ -998,10 +1196,14 @@
       <div class="price-card">
         <div class="tier-name">현장 감독 풀케어 플랜</div>
         <div class="tier-price">건당 90만 원 <span>(월 360만 원)</span></div>
+        <div style="font-size: 12px; color: #4ade80; font-weight: 700; margin-top: -2px; margin-bottom: 8px;">
+          🎁 전략 리포트 20만 원 차감 시 ➔ 첫 달 340만 원!
+        </div>
         <div class="tier-desc">촬영부터 장비 조작까지 총괄 PD가 매회 현장에 직접 동행하여 전담하는 프리미엄 플랜입니다.</div>
         <ul class="tier-features">
           <li><strong>매회 총괄 PD 현장 출장 촬영 감독 (+20만)</strong></li>
-          <li>월 4편 정기 발행 (주 1회)</li>
+          <li><strong>월 4편 정기 발행 (주 1회)</strong></li>
+          <li><strong>[혜택] 전략 리포트 20만 원 100% 전액 차감</strong></li>
           <li>현장 카메라 조작 및 멘트 실시간 디렉팅</li>
           <li>전문가 톤앤매너 장문 대본 전편 작성</li>
           <li>데이터 인포그래픽 모션 & 맞춤 썸네일</li>
@@ -1012,7 +1214,8 @@
     </div>
 
     <div class="nda-notice" style="background: rgba(30, 41, 59, 0.4);">
-      💡 <strong>세무 처리 안내</strong>: 개인 프리랜서 용역 계약으로 진행되며, <strong>주민번호 기반 3.3% 사업소득 원천징수</strong>로 100% 합법적 기업/병의원 경비 처리가 가능합니다.
+      💡 <strong>세무 처리 & 페이백 안내</strong>: 개인 프리랜서 용역 계약으로 진행되며, <strong>주민번호 기반 3.3% 사업소득 원천징수</strong>로 100% 합법적 기업/병의원 경비 처리가 가능합니다. <br>
+      ※ <strong>채널 정밀 진단 전략 리포트(20만 원)</strong> 비용은 <strong>월 정기 파트너십(월 280만/360만) 체결 시 첫 달 제작비에서 100% 전액 차감(공제)</strong>됩니다. (단독 1편 파일럿 제작 50만 원에는 차감 미적용)
     </div>
   </section>
 
@@ -1056,7 +1259,7 @@
         <a href="https://open.kakao.com/o/sEX8RWNi" target="_blank" class="contact-card-btn" id="kakaoBtn">
           <span class="contact-tag">⚡ 1:1 비공개 실시간 상담 (100% 익명 가능)</span>
           <span class="contact-main-text" style="font-size: 16.5px;">카카오톡 1:1 오픈채팅으로 상담하기</span>
-          <span class="contact-sub-text">채널 분석 무료 진단 및 첫 편(60만 원) 일정 조율</span>
+          <span class="contact-sub-text">전략 리포트(20만 원) 및 정기 파트너십(월 280만~) 일정 조율</span>
         </a>
       </div>
     </div>
@@ -1074,8 +1277,8 @@
 <!-- Sticky Bottom Bar -->
 <div class="sticky-bar">
   <div class="sticky-info">
-    <span style="color: var(--text-sub); font-size: 11px;">첫 촬영 1:1 현장 코칭 포함</span><br>
-    <span class="price">첫 편 스타터 60만 원 <span style="font-size: 11px; color: #94a3b8; font-weight: normal;">(이후 셀프 70만 / 현장감독 90만)</span></span>
+    <span style="color: var(--text-sub); font-size: 11px;">전략 리포트 20만 원 (월 계약 시 100% 전액 차감)</span><br>
+    <span class="price">정기 셀프 월 280만 <span style="font-size: 11px; color: #94a3b8; font-weight: normal;">(단독 1편 파일럿 50만)</span></span>
   </div>
   <a href="https://open.kakao.com/o/sEX8RWNi" target="_blank" class="sticky-btn">
     1:1 빠른 문의하기
