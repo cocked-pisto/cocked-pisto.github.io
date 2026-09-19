@@ -660,8 +660,8 @@
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      max-width: 940px;
+      gap: 16px;
+      max-width: 1060px;
       margin: 0 auto 24px;
     }
 
@@ -669,7 +669,7 @@
       background: var(--surface);
       border: 1.5px solid var(--border);
       border-radius: 14px;
-      padding: 26px 18px;
+      padding: 28px 20px;
       display: flex;
       flex-direction: column;
       box-shadow: var(--shadow-card);
@@ -711,19 +711,20 @@
     }
 
     .price-num span {
-      font-size: 13.5px;
+      font-size: 15px;
       color: var(--text-muted);
       font-weight: 500;
     }
 
     .price-discount-tag {
-      font-size: 13px;
-      color: #b45309;
-      background: #fef3c7;
-      padding: 3px 8px;
-      border-radius: 4px;
+      font-size: 12.5px;
       font-weight: 800;
-      margin-bottom: 14px;
+      color: #1d4ed8;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 5px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
       display: inline-block;
       width: fit-content;
     }
@@ -742,7 +743,7 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 11px;
+      gap: 12px;
       font-size: 14px;
       color: var(--text-body);
       margin-bottom: 24px;
@@ -750,41 +751,61 @@
     }
 
     .price-features li {
-      display: flex;
-      gap: 8px;
-      align-items: flex-start;
-      line-height: 1.5;
+      position: relative;
+      line-height: 1.55;
       word-break: keep-all;
+      display: block;
     }
 
     .price-features li.include-base {
       background: #f1f5f9;
       color: #1e293b;
       font-weight: 700;
-      padding: 9px 12px;
+      padding: 8px 12px;
       border-radius: 8px;
       border-left: 3px solid var(--primary);
       margin-bottom: 4px;
       font-size: 13.5px;
     }
 
+    .price-features li.feature-item {
+      padding-left: 20px;
+    }
+
     .price-features li.feature-item::before {
       content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
       color: var(--primary);
       font-weight: 900;
-      flex-shrink: 0;
+      font-size: 15px;
+    }
+
+    .price-features li.feature-upgrade {
+      padding-left: 20px;
     }
 
     .price-features li.feature-upgrade::before {
       content: "★";
+      position: absolute;
+      left: 0;
+      top: 0;
       color: #d97706;
       font-weight: 900;
-      flex-shrink: 0;
+      font-size: 14px;
+    }
+
+    .price-features li.feature-gift {
+      padding-left: 22px;
     }
 
     .price-features li.feature-gift::before {
       content: "🎁";
-      flex-shrink: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 13.5px;
     }
 
     .price-btn {
@@ -1240,10 +1261,13 @@
         <div class="price-desc">정기 계약 전에 딱 1편만 먼저 제작해보고 영상 퀄리티와 프로세스를 직접 검증하는 파일럿 플랜입니다.</div>
         <ul class="price-features">
           <li class="include-base">📁 단독 1편 파일럿 제작</li>
-          <li><strong>1:1 전문 PD 현장 컨설팅</strong> (카메라·각도·연출·연기 가이드 / 서울·수도권 현장 방문)</li>
-          <li class="feature-item">전문직 맞춤 대본 1편 완벽 작성 (대표님 준비 0분)</li>
-          <li class="feature-item">고급 모션그래픽 & 맞춤 썸네일 1종 (완제품 납품)</li>
-          <li class="feature-item">무상 수정 2회 보장 (정기 계약 전 톤앤매너 맞추는 작업)</li>
+          <li>
+            <strong style="white-space: nowrap;">1:1 전문 PD 현장 컨설팅</strong><br>
+            <span style="font-size: 13px; color: #64748b;">(카메라·각도·연출·연기 가이드 / 서울·수도권 방문)</span>
+          </li>
+          <li class="feature-item">전문직 맞춤 대본 1편 완벽 작성 <span style="white-space: nowrap;">(대표님 준비 0분)</span></li>
+          <li class="feature-item">고급 모션그래픽 & 맞춤 썸네일 1종 <span style="white-space: nowrap;">(완제품 납품)</span></li>
+          <li class="feature-item">무상 수정 2회 보장 <span style="white-space: nowrap;">(정기 계약 전 톤앤매너 조율)</span></li>
         </ul>
         <a href="https://open.kakao.com/o/sEX8RWNi" target="_blank" class="price-btn sub">단독 1편 파일럿 신청</a>
       </div>
@@ -1257,10 +1281,13 @@
         <div class="price-desc">세팅된 프롬프터대로 대표님이 매주 30분 읽고 영상만 넘겨주시는 최적의 효율 모델입니다.</div>
         <ul class="price-features">
           <li class="include-base">📁 월 4편 정기 발행 (주 1회)</li>
-          <li><strong>시간에 구애받지 않는 셀프 촬영</strong> (영상 원본만 올리면 끝)</li>
-          <li class="feature-item">전문직 맞춤 대본 1편 완벽 작성 (대표님 준비 0분)</li>
-          <li class="feature-item">고급 모션그래픽 & 맞춤 썸네일 1종 (완제품 납품)</li>
-          <li class="feature-gift"><strong>전략 리포트 20만 원 100% 전액 차감</strong> (첫 달 260만)</li>
+          <li>
+            <strong style="white-space: nowrap;">시간에 구애받지 않는 셀프 촬영</strong><br>
+            <span style="font-size: 13px; color: #64748b;">(프롬프터 보고 30분 녹화 후 영상 원본만 전송)</span>
+          </li>
+          <li class="feature-item">전문직 맞춤 대본 1편 완벽 작성 <span style="white-space: nowrap;">(대표님 준비 0분)</span></li>
+          <li class="feature-item">고급 모션그래픽 & 맞춤 썸네일 1종 <span style="white-space: nowrap;">(완제품 납품)</span></li>
+          <li class="feature-gift"><strong>전략 리포트 20만 원 100% 전액 차감</strong> <span style="white-space: nowrap;">(첫 달 260만)</span></li>
         </ul>
         <a href="https://open.kakao.com/o/sEX8RWNi" target="_blank" class="price-btn primary">정기 셀프 플랜 상담 (월 280만)</a>
       </div>
@@ -1273,10 +1300,13 @@
         <div class="price-desc">카메라 세팅부터 장비 조작까지 총괄 PD가 매회 현장에 직접 동행하여 전담하는 프리미엄 플랜입니다.</div>
         <ul class="price-features">
           <li class="include-base">📁 월 4편 정기 발행 (주 1회)</li>
-          <li><strong>1:1 전문 PD 현장 컨설팅</strong> (카메라·각도·연출·연기 가이드 / 서울·수도권 현장 방문)</li>
-          <li class="feature-item">전문직 맞춤 대본 1편 완벽 작성 (대표님 준비 0분)</li>
-          <li class="feature-item">고급 모션그래픽 & 맞춤 썸네일 1종 (완제품 납품)</li>
-          <li class="feature-gift"><strong>전략 리포트 20만 원 100% 전액 차감</strong> (첫 달 340만)</li>
+          <li>
+            <strong style="white-space: nowrap;">1:1 전문 PD 현장 컨설팅</strong><br>
+            <span style="font-size: 13px; color: #64748b;">(카메라·각도·연출·연기 가이드 / 서울·수도권 방문)</span>
+          </li>
+          <li class="feature-item">전문직 맞춤 대본 1편 완벽 작성 <span style="white-space: nowrap;">(대표님 준비 0분)</span></li>
+          <li class="feature-item">고급 모션그래픽 & 맞춤 썸네일 1종 <span style="white-space: nowrap;">(완제품 납품)</span></li>
+          <li class="feature-gift"><strong>전략 리포트 20만 원 100% 전액 차감</strong> <span style="white-space: nowrap;">(첫 달 340만)</span></li>
         </ul>
         <a href="https://open.kakao.com/o/sEX8RWNi" target="_blank" class="price-btn sub">현장 풀케어 상담 (월 360만)</a>
       </div>
