@@ -660,15 +660,16 @@
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-bottom: 24px;
+      gap: 10px;
+      max-width: 940px;
+      margin: 0 auto 24px;
     }
 
     .price-card {
       background: var(--surface);
       border: 1.5px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 30px 22px;
+      border-radius: 14px;
+      padding: 26px 18px;
       display: flex;
       flex-direction: column;
       box-shadow: var(--shadow-card);
@@ -678,6 +679,7 @@
     .price-card.featured {
       border: 2.5px solid var(--primary);
       box-shadow: 0 12px 36px -4px rgba(29, 78, 216, 0.18);
+      z-index: 1;
     }
 
     .featured-label {
